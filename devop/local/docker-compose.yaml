@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres-container-local
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: app_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init_local.sql:/docker-entrypoint-initdb.d/init_local.sql  # Initializes the DB with SQL script
+    ports:
+      - "5432:5432"  # Map host port 5435 to container port 5432
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:  # Persistent volume for PostgreSQL data
+networks:
+  app-network:
+    driver: bridge

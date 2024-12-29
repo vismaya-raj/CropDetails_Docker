@@ -15,15 +15,15 @@ Steps:
      compiler>>Annottation Proccessors ,check if enabled.If not,select>>cropwise>>Enable>>Obtain Proccessors from classpath>>Apply>>Ok
 8)   Build the project using Maven or Gradle.
 9) Import Postman collection (optional):
-  
- a)Import the attached Postman collection into the Postman application. This is optional but      can be helpful for testing the API endpoints.
-   
+
+a)Import the attached Postman collection into the Postman application. This is optional but      can be helpful for testing the API endpoints.
+
 10) Containerize the app:
 
 a) Run sudo docker-compose up -d again to build and start the application container.
 11) Verify PostgreSQL and Spring Boot containers:
-    
- a) Check if the PostgreSQL and Spring Boot containers are running successfully.
+
+a) Check if the PostgreSQL and Spring Boot containers are running successfully.
 12) Access the application:
-    
- a)The application should now be accessible at http://localhost:<port>, where <port> is the port specified in the docker-compose.yml file.
+
+a)The application should now be accessible at http://localhost:8080, where port is the port specified in the docker-compose.yml file.
